@@ -1,0 +1,60 @@
+.s-invited {
+    .s_inviting {
+        position: relative;
+        background-image: url(../../img/invited.jpg);
+        background-size: cover;
+        height: 100vh;
+        @media (max-width: 991px) {
+            height: unset;
+            padding: 2rem 0 12rem 0;
+        }
+        &::before {
+            @include hoverImages();
+            background-color: $black2-color;
+        }
+        .b_textinvited {
+            padding-top: 5em;
+            margin: 0 auto;
+            width: 60%;
+            text-align: center;
+            color: $white-color;
+            position: relative;
+            z-index: 999;
+            font-family: $secondary-font;
+            @media (max-width: 767px) {
+                width: 100%;
+                padding-top: 1em;
+            }
+            .s-paralel {
+                @include flexBox("", "center");
+                display: flex;
+                span {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid $primary-color;
+                    transform: rotate(45deg);
+                    background-color: transparent;
+                    margin-right: 0.5em;
+                    margin-top: 1em;
+                    animation: rotatedRectangle 3s infinite linear;
+                }
+            }
+            h2 {
+                font-size: $fs-36;
+                @media (max-width: 767px) {
+                    font-size: $fs-25;
+                }
+            }
+
+            span {
+                display: block;
+            }
+            img {
+                width: 8%;
+                margin: 2em auto;
+                border-radius: 50%;
+            }
+        }
+    }
+}

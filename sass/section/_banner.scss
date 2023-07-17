@@ -1,0 +1,28 @@
+.s-banner {
+    background-image: url(../../img/bg.jpg);
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    @include flexBox("center", "center");
+    transform: translateY(50px);
+    @media (max-width: 767px) {
+        height: unset;
+        padding: 10rem 0;
+    }
+    .c-headline-1 {
+        h2 {
+            font-size: 5rem;
+        }
+        @media (max-width: 767px) {
+            img {
+                margin: 11px auto;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            h5 {
+                width: 90%;
+            }
+        }
+    }
+}

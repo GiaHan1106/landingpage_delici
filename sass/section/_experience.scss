@@ -1,0 +1,114 @@
+.s-experience {
+    background-image: url(../../img/amazing.jpg);
+    background-size: cover;
+    height: 120vh;
+    padding-top: 5em;
+    position: relative;
+    font-family: $secondary-font;
+    @media (max-width: 991px) {
+        padding-top: 2em;
+    }
+    &::before {
+        @include hoverImages();
+        background-color: rgb(0 0 0 / 54%);
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 19px;
+        margin: 3em auto;
+        transform: translate(10px, -200px);
+        background-image: url(../../img/logo2.svg);
+    }
+    %circleAnimation {
+        @include hoverImages();
+        background-color: rgb(255 255 255 / 39%);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        z-index: -1;
+        animation: playvideo 2s infinite linear;
+    }
+    .s_between {
+        margin-top: 2em;
+        z-index: 999;
+        position: relative;
+        .s_playvideo {
+            color: $white-color;
+            position: relative;
+            text-align: center;
+            font-size: 1.6em;
+            border: 1px solid$white-color;
+            margin: 0 auto;
+            width: 57px;
+            height: 57px;
+            @include flexBox("center", "center");
+            border-radius: 50%;
+            background-color: $black-color;
+
+            &::before {
+                @extend %circleAnimation;
+            }
+            &::after {
+                @extend %circleAnimation;
+                animation-delay: 0.5s;
+            }
+        }
+        h2 {
+            color: $white-color;
+            font-size: $fs-40;
+            margin: 77px auto;
+            width: 55%;
+            text-align: center;
+            @media (max-width: 991px) {
+                font-size: 2em;
+                margin: 20px auto;
+            }
+        }
+        h4 {
+            color: $primary-color;
+            letter-spacing: 5px;
+            margin: 0 auto;
+            width: 55%;
+            text-align: center;
+            font-size: $fs-14;
+        }
+    }
+    .s_bot {
+        margin-top: 7em;
+        z-index: 999999;
+        position: relative;
+        .s_number {
+            color: $white-color;
+            @include flexBox("center", "");
+            .s_left {
+                font-size: $fs-50;
+                @media (max-width: 991px) {
+                    font-size: $fs-18;
+                }
+            }
+            .s_right {
+                margin-left: 1em;
+                font-size: $fs-16;
+                letter-spacing: 5px;
+                color: $primary-color;
+                span {
+                    display: block;
+                }
+                @media (max-width: 991px) {
+                    font-size: $fs-12;
+                }
+            }
+        }
+    }
+}
+@keyframes playvideo {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

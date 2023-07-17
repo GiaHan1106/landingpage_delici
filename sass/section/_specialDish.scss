@@ -1,0 +1,53 @@
+.s-specialDish {
+    .s_right {
+        position: relative;
+        .logo {
+            img {
+                @include posAbsolute("tl", 28%, 39px);
+                width: 5%;
+                animation: image 3s infinite alternate linear;
+                @media (max-width: 991px) {
+                    left: 31px;
+                    width: 3%;
+                }
+                @media (max-width: 767px) {
+                    left: 39px;
+                    width: 4%;
+                }
+            }
+        }
+        .s_top {
+            .c-headline-1 {
+                font-family: $secondary-font;
+                padding: 14em 7em;
+                text-align: left;
+                @media (max-width: 767px) {
+                    padding: 3em 2em 3em 6em;
+                }
+                img {
+                    margin: 1em 0;
+                }
+                h2 {
+                    font-size: 50px;
+                }
+                h5 {
+                    font-size: 1em;
+                    width: 80%;
+                    margin: 1em 0;
+                    font-weight: $fw-nm;
+                }
+                .s-money {
+                    margin: 1.5em 0;
+                    font-size: $fs-18;
+                    .s_oldmoney {
+                        color: #595653;
+                    }
+                    .s_newmoney {
+                        color: $primary-color;
+                        margin-left: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

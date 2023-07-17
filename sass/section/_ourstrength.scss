@@ -1,0 +1,36 @@
+.s-ourstrength {
+    background-color: #171819;
+    font-family: $secondary-font;
+    padding-bottom: 3em;
+    .s_bot {
+        margin-top: 3em;
+        .s_listcard {
+            .s_cardStrength {
+                padding: 2em;
+                text-align: center;
+                background-color: #151616;
+                img {
+                    width: 35%;
+                    margin: 0 auto;
+                    transition: 0.5s;
+                    &:hover {
+                        transform: rotateY(180deg);
+                    }
+                }
+                h3 {
+                    margin-top: 1em;
+                    font-size: $fs-25;
+                    color: $white-color;
+                }
+                h5 {
+                    font-size: $fs-16;
+                    color: $gray-color;
+                    margin-top: 1em;
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

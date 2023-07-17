@@ -1,0 +1,172 @@
+.s-footer {
+    background-image: url(../../img/footer.jpg);
+    background-size: cover;
+    height: 120vh;
+    position: relative;
+    padding-top: 5em;
+    position: relative;
+    font-family: $secondary-font;
+    &::before {
+        @include posAbsolute("tl", 0, 0);
+        content: "";
+        display: block;
+        background-color: #00000094;
+        width: 100%;
+        height: 100%;
+    }
+    .s_listmenu {
+        .s_menu {
+            color: $gray-color;
+            margin-top: 120px;
+            text-align: center;
+            z-index: 99999;
+            position: relative;
+            margin-bottom: 1em;
+            @media (max-width: 991px) {
+                display: none;
+            }
+            ul {
+                display: inline-block;
+                text-align: center;
+                li {
+                    margin-bottom: 2em;
+
+                    transition: 0.5s;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    &:hover::after {
+                        width: 90%;
+                    }
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 0%;
+                        height: 7px;
+                        margin: 0 auto;
+                        border-top: 2px solid $primary-color;
+                        border-bottom: 2px solid $primary-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+        .s_between {
+            background-image: url(../../img/logo4.png);
+            background-color: $black-color;
+            padding: 2em;
+            text-align: center;
+            width: 130%;
+            transform: translateX(-38px);
+            position: relative;
+            @media (max-width: 991px) {
+                transform: none;
+                width: 100%;
+            }
+            &::after {
+                @include posAbsolute("tl", 0, 0);
+                content: "";
+                display: block;
+                width: 3%;
+                height: 100%;
+                background-image: url(../../img/logo3.svg);
+            }
+            &::before {
+                @include posAbsolute("tr", 0, 0);
+                content: "";
+                display: block;
+                width: 3%;
+                height: 100%;
+                background-image: url(../../img/logo3.svg);
+            }
+            img {
+                width: 60%;
+                margin: 2em auto;
+            }
+            .s_address {
+                cursor: pointer;
+                color: $gray-color;
+                font-size: $fs-16;
+
+                .s_addre {
+                    transition: 0.5s;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    span {
+                        display: block;
+                        transition: 0.5s;
+                    }
+                }
+                .s_paralel {
+                    margin-top: 2em;
+                    span {
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        border: 1px solid $primary-color;
+                        transform: rotate(45deg);
+                        background-color: transparent;
+                        margin-right: 0.1em;
+                        margin: 1em 0;
+                        animation: rotatedRectangle 3s infinite linear;
+                    }
+                }
+                h2 {
+                    color: $white-color;
+                    font-size: $fs-30;
+                }
+                h5 {
+                    font-size: $fs-16;
+                    color: $gray-color;
+                    span {
+                        color: $white-color;
+                    }
+                }
+                .s_mail {
+                    display: flex;
+                    position: relative;
+                    width: 75%;
+                    margin: 2em auto;
+                    @media (max-width: 991px) {
+                        width: 90%;
+                        display: block;
+                        .c-button-1 {
+                            width: 100%;
+                        }
+                    }
+                    input {
+                        background-color: $black-color;
+                        border: none;
+                        width: 100%;
+                        padding: 1em 0;
+
+                        &::placeholder {
+                            color: $white-color;
+                            padding-left: 40px;
+                        }
+                    }
+                    .s_iconmail {
+                        color: $white-color;
+                        position: relative;
+                        i {
+                            @include posAbsolute("tl", 20px, 12px);
+                        }
+                    }
+                }
+            }
+        }
+        .s_lasttext {
+            color: $gray-color;
+            font-size: $fs-16;
+            text-align: center;
+            z-index: 999;
+            position: relative;
+            padding-top: 3em;
+            span {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

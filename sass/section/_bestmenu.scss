@@ -1,0 +1,48 @@
+.s-bestmenu {
+    font-family: $secondary-font;
+    background-color: $black-color;
+    .s-listmenu {
+        p {
+            color: $gray-color;
+        }
+        h3 {
+            color: $primary-color;
+            font-size: $fs-14;
+            display: inline-block;
+            letter-spacing: 5px;
+            &:hover::after {
+                width: 90%;
+            }
+            &::after {
+                display: block;
+                content: "";
+                width: 0%;
+                height: 7px;
+                margin: 0.8em auto;
+                border-top: 2px solid $primary-color;
+                border-bottom: 2px solid $primary-color;
+                transition: 0.5s;
+            }
+        }
+        .s_special {
+            .s_top {
+                padding-top: 2em;
+                margin-bottom: 5em;
+            }
+        }
+        .s_upcoming {
+            background-image: url(../../img/bestmenu/bestmenu2.jpg);
+            height: 91vh;
+            background-size: cover;
+            .s_top {
+                transform: translateY(400px);
+            }
+        }
+        .s_choice {
+            .s_top {
+                padding-top: 2em;
+                margin-bottom: 5em;
+            }
+        }
+    }
+}

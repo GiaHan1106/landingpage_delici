@@ -1,0 +1,66 @@
+.s-updated {
+    margin: 10em 0;
+    font-family: $secondary-font;
+    .s_bot {
+        margin-top: 2em;
+        .col-md-6 {
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+        .image {
+            position: relative;
+            overflow: hidden;
+            &:hover img {
+                transform: scale(1.2);
+            }
+            &::before {
+                @include posAbsolute("tl", 0, 0);
+                content: "";
+                width: 30%;
+                height: 108%;
+                z-index: 99999;
+                transform: skewX(-25deg);
+                background: linear-gradient(90deg, hsl(0deg 0% 100% / 13%) 0, hsl(0deg 0% 100% / 86%));
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s;
+            }
+            &:hover::before {
+                opacity: 1;
+                visibility: visible;
+                left: 200%;
+                transition: 2s;
+            }
+            img {
+                transition: 0.5s;
+            }
+            .s_day {
+                @include posAbsolute("tl", 30px, 35px);
+                color: $primary-color;
+                background-color: $black-color;
+                padding: 8px 1px 0 4px;
+                h5 {
+                    font-size: $fs-14;
+                }
+            }
+            .s_inforFood {
+                @include posAbsolute("bl", 0, 0);
+                background-color: #000000a2;
+                padding: 1em;
+                h4 {
+                    color: $primary-color;
+                    letter-spacing: 5px;
+                    font-size: $fs-14;
+                }
+                h3 {
+                    color: $white-color;
+                    font-size: $fs-25;
+                }
+            }
+        }
+        .c-button-1 {
+            margin-top: 3em;
+        }
+    }
+}

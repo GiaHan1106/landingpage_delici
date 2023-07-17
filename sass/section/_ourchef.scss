@@ -1,0 +1,72 @@
+.s-ourchef {
+    background-color: $black-opacity-color;
+    padding: 4em 0;
+    font-family: $secondary-font;
+    .s-bot {
+        .col-lg-6 {
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+        .s-chef {
+            margin-top: 2em;
+            color: $white-color;
+            .image {
+                overflow: hidden;
+                position: relative;
+                &:hover .social {
+                    right: unset;
+                    width: 100%;
+                    animation: hover 0.2s linear;
+                }
+                .social {
+                    background-color: #e4c59091;
+                    @include hoverImages();
+                    width: 0;
+                    right: 0;
+                    z-index: 9999;
+                    @include flexBox("center", "center");
+                    gap: 10px;
+                    overflow: hidden;
+
+                    transition: 0.5s;
+
+                    i {
+                        text-align: center;
+                        background-color: $black-color;
+                        padding-top: 1em;
+                        width: 11%;
+                        height: 9%;
+                        transition: 0.5s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $primary-color;
+                            color: $black-color;
+                        }
+                    }
+                }
+            }
+            h2 {
+                padding-top: 1em;
+            }
+            h4 {
+                color: $primary-color;
+                letter-spacing: 5px;
+                margin: 1em 0;
+                font-size: $fs-14;
+            }
+            h5 {
+                font-size: $fs-16;
+                color: $gray-color;
+            }
+        }
+    }
+}
+@keyframes hover {
+    from {
+        left: -40%;
+    }
+    to {
+        left: 0;
+    }
+}

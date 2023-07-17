@@ -1,0 +1,96 @@
+.s-form {
+    font-family: $secondary-font;
+    margin-top: -100px;
+    position: relative;
+    background-color: #171819;
+    .s_box {
+        background-color: $black-color;
+        padding: 2em;
+        transform: translateY(-100px);
+    }
+    .s_title {
+        font-size: $fs-40;
+    }
+    .s_phone {
+        font-size: $fs-18;
+        span {
+            color: $primary-color;
+        }
+        margin-bottom: 2em;
+    }
+    .s-formleft {
+        margin: 0 auto;
+        text-align: center;
+        color: $white-color;
+        .c-button-1 {
+            width: 100%;
+            margin-top: 0.5em;
+        }
+        .s_forminput {
+            .s_input {
+                margin-bottom: 1em;
+                input,
+                select {
+                    padding: 0.5em;
+                    width: 100%;
+                    background-color: #1a1b1c;
+                    border: none;
+                    color: $white-color;
+                    font-family: inherit;
+                    outline: transparent;
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                }
+                select {
+                    width: 100%;
+                    padding: 0.7em;
+                }
+            }
+            textarea {
+                outline: transparent;
+                width: 100%;
+                background-color: #1a1b1c;
+                border: none;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .s-formright {
+        background-image: url(../../img/formright.png);
+        background-size: cover;
+        height: 100%;
+        color: $white-color;
+        text-align: center;
+        .s_phone {
+            font-size: $fs-18;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            span {
+                font-size: $fs-30;
+                display: block;
+            }
+        }
+        .b_parelel {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #e4c590;
+            transform: rotate(45deg);
+            background-color: transparent;
+            margin-bottom: 0.5em;
+        }
+        .b_location {
+            font-size: $fs-18;
+            margin-bottom: 1.5em;
+            span {
+                display: block;
+                font-size: $fs-14;
+                color: $gray-color;
+            }
+        }
+    }
+}

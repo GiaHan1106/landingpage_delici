@@ -1,0 +1,71 @@
+.s-specialoffer {
+    margin-top: 3em;
+    padding-bottom: 3em;
+    .s_bot {
+        padding: 3em 0;
+        .s-specialFood {
+            .b_imageSpecialFood {
+                overflow: hidden;
+                position: relative;
+                &::before {
+                    @include hoverImages();
+                    background-color: $yellow-light;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.5s;
+                    z-index: 1;
+                }
+                &::after {
+                    @include hoverImages();
+                    background-color: #ffffff4f;
+                    z-index: 2;
+                    transform: scale(0);
+                    transition: 0.5s;
+                }
+                img {
+                    transition: 0.5s;
+                }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    &::after {
+                        transform: scale(1);
+                        opacity: 0.1;
+                    }
+                    img {
+                        transform: rotate(5deg) scale(1.1);
+                    }
+                }
+            }
+            &:nth-child(2) {
+                transform: translateY(40px);
+            }
+            &:nth-child(4) {
+                transform: translateY(40px);
+            }
+            .b_detailText {
+                text-align: center;
+                font-family: $secondary-font;
+                color: $white-color;
+                margin: 1em 0;
+                h2 {
+                    font-size: $fs-25;
+                }
+                h5 {
+                    color: $gray-color;
+                    font-size: $fs-16;
+                    margin: 1em 0;
+                }
+                h3 {
+                    color: $primary-color;
+                    font-size: $fs-18;
+                }
+            }
+        }
+    }
+    .s_button {
+        text-align: center;
+    }
+}

@@ -1,0 +1,124 @@
+.s-flavor {
+    background-color: $black-color;
+    position: relative;
+    &::after {
+        @include posAbsolute("tr", 20px, 0);
+        content: "";
+        width: 20%;
+        height: 30%;
+        background-image: url(../../img/pic.png);
+        animation: image 3s infinite alternate linear;
+    }
+    &::before {
+        @include posAbsolute("bl", 0, 30px);
+        content: "";
+        width: 20%;
+        height: 30%;
+        background-image: url(../../img/pic2.png);
+        animation: image 3s infinite alternate linear;
+    }
+    .s_top {
+        position: relative;
+        .c-headline-1 {
+            transform: translateY(40%);
+            @media (max-width: 991px) {
+                transform: none;
+            }
+        }
+    }
+    .s_list {
+        .col-lg-4 {
+            &:nth-child(2) {
+                margin-top: 90px;
+                @media (max-width: 991px) {
+                    margin-top: 0;
+                }
+            }
+            &:last-child {
+                @media (max-width: 991px) {
+                    margin: 0 auto;
+                }
+            }
+            .s_card {
+                margin-top: 1em;
+                position: relative;
+                padding: 50px 50px;
+                overflow: hidden;
+                text-align: center;
+                &:hover img {
+                    transform: scale(1.2);
+                }
+                .img {
+                    position: relative;
+                    overflow: hidden;
+                    &::before {
+                        @include posAbsolute("tl", -28px, -100%);
+                        content: "";
+                        width: 30%;
+                        height: 108%;
+                        z-index: 99999;
+                        transform: skewX(-25deg);
+                        background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.4));
+                    }
+                    &:hover::before {
+                        left: 200%;
+                        transition: 2s;
+                    }
+                }
+                &:hover::after {
+                    transform: translateX(-50%) rotateY(180deg);
+                }
+                &::after {
+                    @include posAbsolute("centerX", 16px, 50%);
+                    background-image: url(../../img/icon1.svg);
+                    content: "";
+                    width: 166px;
+                    height: 69%;
+                    transition: 0.5s;
+                }
+                img {
+                    z-index: 2;
+                    position: relative;
+                    transition: 1s;
+                }
+                h3 {
+                    color: $white-color;
+
+                    font-size: $fs-30;
+                    margin-top: 2.5em;
+                    font-family: $secondary-font;
+                }
+                a {
+                    color: $primary-color;
+                    text-align: center;
+                    margin-top: 2em;
+                    font-size: $fs-14;
+                    letter-spacing: 5px;
+                    display: inline-block;
+                    &:hover::after {
+                        width: 90%;
+                    }
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 0%;
+                        height: 7px;
+                        margin: 0 auto;
+                        border-top: 2px solid $primary-color;
+                        border-bottom: 2px solid $primary-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes image {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(30px);
+    }
+}
