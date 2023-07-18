@@ -6,6 +6,9 @@
     padding-top: 5em;
     position: relative;
     font-family: $secondary-font;
+    @media (max-width: 575px) {
+        padding-top: 1em;
+    }
     &::before {
         @include posAbsolute("tl", 0, 0);
         content: "";

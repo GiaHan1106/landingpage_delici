@@ -28,10 +28,13 @@
             .s_top {
                 padding-top: 2em;
                 margin-bottom: 5em;
+                @media (max-width: 575px) {
+                    margin-bottom: 0em;
+                }
             }
         }
         .s_upcoming {
-            background-image: url(../../img/bestmenu/bestmenu2.jpg);
+            background-image: url(../img/bestmenu/bestmenu2.jpg);
             height: 91vh;
             background-size: cover;
             .s_top {
@@ -42,6 +45,10 @@
             .s_top {
                 padding-top: 2em;
                 margin-bottom: 5em;
+                @media (max-width: 575px) {
+                    padding-top: 2em;
+                    margin-bottom: 0em;
+                }
             }
         }
     }

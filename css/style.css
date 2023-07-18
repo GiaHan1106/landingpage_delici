@@ -271,6 +271,11 @@ body {
   position: relative;
   font-family: "Forum", cursive;
 }
+@media (max-width: 575px) {
+  .s-footer {
+    padding-top: 1em;
+  }
+}
 .s-footer::before {
   position: absolute;
   top: 0;
@@ -457,7 +462,7 @@ body {
 @media (max-width: 767px) {
   .s-banner {
     height: unset;
-    padding: 10rem 0;
+    padding: 10rem 0 5em 0;
   }
 }
 .s-banner .c-headline-1 h2 {
@@ -508,6 +513,7 @@ body {
 @media (max-width: 991px) {
   .s-flavor .s_top .c-headline-1 {
     transform: none;
+    padding-top: 2em;
   }
 }
 .s-flavor .s_list .col-lg-4:nth-child(2) {
@@ -611,6 +617,11 @@ body {
   background-color: #171819;
   position: unset;
   padding: 5em 0 15em 0;
+}
+@media (max-width: 767px) {
+  .s-ourStory {
+    padding: 5em 0 2em 0;
+  }
 }
 @media (max-width: 991px) {
   .s-ourStory .s_left .s_top {
@@ -764,6 +775,11 @@ body {
   position: relative;
   z-index: 9999;
 }
+@media (max-width: 767px) {
+  .s-selection .s_top {
+    padding-top: 2em;
+  }
+}
 .s-selection .s_bot {
   position: relative;
   z-index: 99999;
@@ -794,6 +810,11 @@ body {
 }
 .s-selection .s_bot .s_menu ul li.active span::after {
   width: 100%;
+}
+@media (max-width: 414px) {
+  .s-selection .s_bot .s_menu ul li {
+    margin: 1em 2em;
+  }
 }
 .s-selection .s_bot .s_menu ul li span {
   display: inline-block;
@@ -1317,8 +1338,13 @@ body {
   padding-top: 2em;
   margin-bottom: 5em;
 }
+@media (max-width: 575px) {
+  .s-bestmenu .s-listmenu .s_special .s_top {
+    margin-bottom: 0em;
+  }
+}
 .s-bestmenu .s-listmenu .s_upcoming {
-  background-image: url(../../img/bestmenu/bestmenu2.jpg);
+  background-image: url(../img/bestmenu/bestmenu2.jpg);
   height: 91vh;
   background-size: cover;
 }
@@ -1328,6 +1354,12 @@ body {
 .s-bestmenu .s-listmenu .s_choice .s_top {
   padding-top: 2em;
   margin-bottom: 5em;
+}
+@media (max-width: 575px) {
+  .s-bestmenu .s-listmenu .s_choice .s_top {
+    padding-top: 2em;
+    margin-bottom: 0em;
+  }
 }
 
 .s-ourchef {
@@ -1501,6 +1533,11 @@ body {
   z-index: 999999;
   position: relative;
 }
+@media (max-width: 575px) {
+  .s-experience .s_bot {
+    margin-top: 4em;
+  }
+}
 .s-experience .s_bot .s_number {
   color: #fff;
   display: flex;
@@ -1541,6 +1578,11 @@ body {
 .s-updated {
   margin: 10em 0;
   font-family: "Forum", cursive;
+}
+@media (max-width: 575px) {
+  .s-updated {
+    margin: 1em 0;
+  }
 }
 .s-updated .s_bot {
   margin-top: 2em;

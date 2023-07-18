@@ -22,6 +22,9 @@
         padding-top: 6em;
         position: relative;
         z-index: 9999;
+        @media (max-width: 767px) {
+            padding-top: 2em;
+        }
     }
     .s_bot {
         position: relative;
@@ -48,6 +51,9 @@
                     position: relative;
                     &.active span::after {
                         width: 100%;
+                    }
+                    @media (max-width: 414px) {
+                        margin: 1em 2em;
                     }
                     span {
                         display: inline-block;

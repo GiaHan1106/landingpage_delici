@@ -23,6 +23,7 @@
             transform: translateY(40%);
             @media (max-width: 991px) {
                 transform: none;
+                padding-top: 2em;
             }
         }
     }

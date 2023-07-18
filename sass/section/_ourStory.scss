@@ -2,6 +2,9 @@
     background-color: $black-opacity-color;
     position: unset;
     padding: 5em 0 15em 0;
+    @media (max-width: 767px) {
+        padding: 5em 0 2em 0;
+    }
     .s_left {
         .s_top {
             @media (max-width: 991px) {
